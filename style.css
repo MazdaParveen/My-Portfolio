@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+
+   /* HOME START    */
+
+
+ html,body{
+    height: 100%;
+    width: 100%;
+ }
+ /* #main{
+    position: relative;
+    overflow: hidden;
+ } */
+
+ 
+ /* navebar */
+ 
+
+     .nav {
+        background-image: linear-gradient(to right, #9E768F , #9FA4C4);
+        overflow: hidden;
+        position: fixed  ;
+      }
+      
+      
+      /* Styling the links inside the navbar */
+      .nav a {
+        
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight:bolder;
+      }
+      
+      .nav a:hover {
+        background-color: rgb(177, 161, 72);
+        color: black;
+      }
+      
+    
+
+      /* Adding an active class to highlight the current page */
+      .nav a.active {
+        background-color:rgb(76, 68, 199);
+        color:black;
+      }
+      .heading{
+        text-align:center; 
+      }
+      .content{
+        font-size: 20px; 
+      }
+      @media only screen and (max-width : 300px){
+        .nav {
+     float:left;
+     } }
+    
+
+
+
+    /* home */
+
+    #home{
+        background: url('maz.jpg')  no-repeat center center/cover;
+        padding: 1px 1px;
+        
+        width: 100%;
+        height: auto;
+    }
+    .datel{
+    margin-left: 37%;
+    margin-top: 15%;
+    
+}
+.datel{
+    font-size: 35px;
+    color: #212121;
+    margin-bottom: 20px;    
+
+}
+.datel h1{
+    position: relative;
+    font-size: 50px;
+   
+}
+.datel h1 span{
+    position: sticky;
+    font-size: 50px;
+    color: #004eff;
+    top: 0;
+    left: 254px;
+    width: 0%;
+    height: 93%;
+    
+    animation: text_reveal_box 4s ease;
+}
+.datel p{
+    color:#f71a03f0;
+    line-height: 22px;
+    font-size: 30px;
+
+}
+.datel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0px;
+    border-radius: 5px;
+}
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+
+/* portfolio start  */
+
+#portfolio .project {
+flex-direction: column;
+max-width: 1200px;
+margin: 0 auto;
+padding: 100px 0;
+
+}
+#portfolio .project-header h1{
+    margin-bottom: 50px;
+    
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#portfolio .all-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+#portfolio .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #22435a;
+    overflow: hidden;
+    border-radius: 10px;
+} 
+#portfolio .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(60deg, #53e0e0 0%, #559ce7 100%);
+    color: white;
+}
+#portfolio .project-info h1{
+    font-size: 2rem;
+    color: black;
+    /* font-weight: 500; */
+}
+#potfolio .project-info h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10% ;
+}
+#potfolio .project-info p{
+    
+    margin: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transform : rotate(300deg);
+            -webkit-transform: rotate(300deg);
+            color: #c6afaf;
+}
+#potfolio .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#potfolio .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #53e0e0 0%, #559ce7 100%);
+
+}
+#potfolio .project-img img{
+    transition: .4s ease transform;
+}
+
+#portfolio .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+span{
+    color: #f50c37;
+}
+
+/* portfolio end  */
+
+/* about start */
+#about .about{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    text-align: center;
+    min-height: 100vh;
+    /* max-width: 1200px; */
+    background: #53e0e0;
+     margin: 0px auto;
+     padding: 100px 20px;  
+
+}
+.about container {
+    
+margin: 150px auto;
+width: 70%;
+}
+#about .col-left img{
+    max-width: 350px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin-right: 25px;
+    /* width: 250px;
+    height: 300px; */
+}
+#about .col-right{
+   color: #fff;
+    width: 90%;
+
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.col-right a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0px;
+    border-radius: 5px;
+}
+
+
+/* about end  */
+
+
+
+
+
+
+
+
+
+
+/* CONTACT START  */
+
+ .h-primary{
+    text-align: center;
+    font-size:xx-large;
+    font-weight: bold;
+}
+#contact{
+    position: relative;
+    
+ }
+ #contact::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.6;
+   background: url('contact.jpg')  no-repeat center center/cover;
+ }
+ #contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+ }
+ #contact-box input
+ , #contact-box textarea{
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 9px;
+  font-size: 1.1rem
+ }
+ 
+ #contact-box form{
+  width: 40%;
+
+ }
+ #contact-box label{
+  font-size: 1.3rem;
+  
+ }
+
+
+ footer{
+  background: black;
+  color: white;
+  padding: 9px 20px;
+ } 
+/*CONTACT END  */
+
